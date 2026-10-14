@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Replace the full-height dock with a movable, resizable floating office, defaulting to 520×400 in the bottom-right corner.
+- Remember window geometry without changing the chat layout or sidebar state.
+- Coalesce Canvas resizing, keep intrinsic dimensions out of layout, and redraw immediately to reduce resize flicker.
+
 ## 0.3.0 (2026-09-17)
 
 - 适配 dsh 0.1.5：客户端运行时会话数据拆分（会话内容迁至 `uiConversation` 的 `binding(id).target('chat').legacy`，待审批/提问迁至 `uiSession.pendingInteractions` 且 plan-review 并入 question，审批由 `respond()` 改为 `answer()` 模型），新增 `runtimeAdapter` 在订阅边界拼回原数据形状，OfficeCanvas/officeStore 零改动；**不再兼容 0.1.2**
