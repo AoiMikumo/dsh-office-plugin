@@ -111,4 +111,3 @@ export function OfficeLauncher(props: OfficeLauncherProps): React.ReactElement {
     </>
   )
 }
-
